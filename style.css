@@ -3,6 +3,7 @@
   box-sizing: border-box;
   font-weight: bold;
   font-family: 'Rakkas', 'cursive';
+  scroll-behavior: smooth;
 }
 
 @keyframes display {
