@@ -1,5 +1,5 @@
-var x = setInterval(function() {
-  let dateArmy = new Date("dec 1, 2025");
+var x = setInterval(function () {
+  let dateArmy = new Date("2025-12-01T00:00:00");
   let dateNow = new Date();
 
   let date = dateArmy - dateNow;
@@ -9,12 +9,12 @@ var x = setInterval(function() {
   var minutes = Math.floor((date % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((date % (1000 * 60)) / 1000);
 
-  document.querySelector("h1.time").cssText = "direction: rtl;"
+  const timer = document.querySelector("h1.time");
+  timer.style.direction = "rtl";
+  timer.innerHTML = `${days} يوم : ${hours} ساعة : ${minutes} دقيقة : ${seconds} ثانية`;
 
-  document.querySelector("h1.time").innerHTML = `${days} يوم : ${hours} ساعة : ${minutes} دقيقة : ${seconds} ثانية`
-  // If the count down is finished, write some text
   if (date < 0) {
     clearInterval(x);
-    document.querySelector("h1.time").innerHTML = "انتهاء الوقت ... خلاص خلصنا جيش ✨🥳🥳";
+    timer.innerHTML = "انتهاء الوقت ... خلاص خلصنا جيش ✨🥳🥳";
   }
 }, 1000);
