@@ -1,5 +1,5 @@
 var x = setInterval(function() {
-  let dateArmy = new Date("nov 25, 2024");
+  let dateArmy = new Date("Dec 1, 2025");
   let dateNow = new Date();
 
   let date = dateArmy - dateNow;
